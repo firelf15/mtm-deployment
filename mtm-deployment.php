@@ -5,6 +5,7 @@ Plugin Name: MTM WordPress Deployment Updates
 Description: Runs update routines allowing code based database updates.
 Author: Metal Toad Media
 Version: 1.02
+Based on: http://andymantell.com/blog/2013/07/quick-and-dirty-wordpress-deployment-plugin 
 */
 add_action( 'admin_init', 'deployment_admin_init' );
 
@@ -47,10 +48,6 @@ function deployment_admin_init() {
  * Update functions.
  */
 
-/**
- * Disable the wordpress-meta-description plugin.
- * Enable and configure the add-meta-tags plugin
- */
 function deployment_update_1() {
 
 	require_once ABSPATH . '/wp-admin/includes/plugin.php';
